@@ -6,12 +6,14 @@ Il software stampa prima la parola più corta, poi la parola più lunga. */
 const firstWord = prompt("Inserisci la prima parola");
 const secondWord = prompt("Inserisci la seconda parola");
 
+let divEl = document.querySelector("div");
+
 // 2. Il software stampa prima la parola più corta, poi la parola più lunga.- if/ else
 
 if(firstWord.length > secondWord.length){
-    console.log(secondWord, firstWord);
+    divEl.innerHTML = `${secondWord}, ${firstWord}`;
 } else if (secondWord.length > firstWord.length){
-    console.log(firstWord, secondWord);
+    divEl.innerHTML = `${firstWord}, ${secondWord}`;
 } else {
-    console.log("le parole hanno la stessa lunghezza");
+    divEl.innerHTML = "le parole hanno la stessa lunghezza";
 }
